@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Board</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+    <div class="logo">
+        <i class="fa-solid fa-briefcase"></i>
+        <h2>Job Board</h2>
+    </div>
+
+    <ul>
+      <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="browse-jobs.html">Browse Jobs</a></li>
+    <li><a href="pages.html">Pages</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+    </ul>
+
+    <div class="nav-btn">
+        <a href="login.html">
+    <button>Login</button>
+</a>
+        <button onclick="location.href='employer.html'">
+Post A Job
+</button>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-text">
+        <h3>4536+ Jobs Listed</h3>
+
+        <h1>Find your Dream Job</h1>
+
+        <p>
+            Discover thousands of opportunities from top companies
+            and apply with ease.
+        </p>
+
+      <button onclick="document.getElementById('resume').click()">
+Upload Your Resume
+</button>
+
+<input type="file"
+id="resume"
+style="display:none"
+onchange="uploadResume()">
+    </div>
+
+    <div class="hero-image">
+        <img src="https://i.pinimg.com/1200x/96/a6/84/96a68416245e12895587c00d5aa8e5bc.jpg" alt="Job">
+    </div>
+
+</section>
+
+<!-- Search Section -->
+
+<section class="search-section">
+
+    <input type="text" id="keyword" placeholder="Search Keyword">
+
+    <select id="location">
+        <option value="">Location</option>
+        <option>Chennai</option>
+        <option>Bangalore</option>
+        <option>Coimbatore</option>
+    </select>
+
+    <select id="category">
+        <option value="">Category</option>
+        <option>IT</option>
+        <option>Design</option>
+        <option>Marketing</option>
+    </select>
+
+    <button onclick="searchJob()">Find Job</button>
+
+</section>
+
+<!-- Featured Jobs -->
+
+<section class="jobs">
+
+    <h2>Featured Jobs</h2>
+
+    <div class="job-container">
+
+        <div class="job-card">
+            <h3>Frontend Developer</h3>
+            <p>Google</p>
+            <p>Chennai</p>
+            <button onclick="goToLogin()">Apply Now</button>
+        </div>
+
+        <div class="job-card">
+            <h3>UI/UX Designer</h3>
+            <p>Amazon</p>
+            <p>Bangalore</p><button onclick="goToLogin()">Apply Now</button>
+        </div>
+
+        <div class="job-card">
+            <h3>Data Analyst</h3>
+            <p>TCS</p>
+            <p>Hyderabad</p>
+            <button onclick="goToLogin()">Apply Now</button>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+function goToLogin() {
+    window.location.href = "apply.html";
+}
+</script>
+
+</body>
+</html>
+

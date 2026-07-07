@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-box">
+
+<h2>Login</h2>
+
+<form onsubmit="loginUser(event)">
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+</form>
+
+<script>
+function loginUser(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (email !== "" && password !== "") {
+        alert("Login Successful!");
+        window.location.href = "apply.html";
+    } else {
+        alert("Please enter Email and Password.");
+    }
+}
+</script>
