@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Quiz Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Online Quiz Maker</h1>
+    <button onclick="showCreateQuiz()">Create Quiz</button>
+</header>
+
+<div class="container">
+
+    <!-- Quiz Creation -->
+    <div id="createQuiz">
+        <h2>Create Quiz</h2>
+
+        <input type="text" id="question" placeholder="Enter Question">
+
+        <input type="text" id="option1" placeholder="Option A">
+        <input type="text" id="option2" placeholder="Option B">
+        <input type="text" id="option3" placeholder="Option C">
+        <input type="text" id="option4" placeholder="Option D">
+
+        <select id="correctAnswer">
+            <option value="0">Option A</option>
+            <option value="1">Option B</option>
+            <option value="2">Option C</option>
+            <option value="3">Option D</option>
+        </select>
+
+        <button onclick="addQuestion()">Add Question</button>
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Taking -->
+    <div id="quizSection" style="display:none;">
+        <h2 id="quizQuestion"></h2>
+
+        <div id="options"></div>
+
+        <button onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- Result -->
+    <div id="result" style="display:none;">
+        <h2>Quiz Completed!</h2>
+        <h3 id="score"></h3>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
